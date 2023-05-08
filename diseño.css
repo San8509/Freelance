@@ -1,0 +1,247 @@
+/* valores*/
+:root {    /*colores asignados para la pagina*/
+  --blanco: #ffffff;
+  --oscuro: #212121;
+  --primario: #ffc107df;
+  --gray: #272829fd;
+  --azul: #046487;
+}
+
+html {
+  font-size: 62.5px;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Hind Siliguri", sans-serif;
+  background-image: linear-gradient(to top, rgba(104, 178, 191, 0.644) 0%, var(--blanco) 70%);
+}/*ponemos degradadamente color al body de la pagina*/
+
+.nombre {
+text-align: center;
+font-size: 20px;
+}
+.diseño {
+  color: white;
+  font-size: 30px;
+}
+/*span*/
+.free {
+  color: rgba(46, 46, 46, 0.728);
+  font-size: 15px;
+}
+.free_2 {
+color: whitesmoke;
+font-size: 15px;
+}
+
+#location {
+  color: white;
+}
+
+.bot {
+  padding: 0 90px;
+  background-color: #046487;
+  border-radius: 3px;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.nav_1 {
+  background-color: var(--azul);
+  display: flex;
+  justify-content: space-around;
+}
+.nav_1 :hover {
+  background-color: var(--primario);
+  color: #212121;
+}
+.nav_1 a {
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 0 5px;
+  color: white;
+}
+ .nav_1, .bot, .principal, .formulario {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  }
+/*contenido del navegador*/
+@media (max-width: 480px) {
+  .nav_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+/*contenido del main*/
+@media (max-width: 768px) {
+.servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/*imagen*/
+.hero {
+  background-image: url(../FREELANCE/img/10\ Things\ to\ Avoid\ as\ a\ New\ Blogger\ -\ Boss\ Girl\ Bloggers.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenido-hero {
+  text-align: center;
+}
+
+/*main*/
+.principal {
+  -webkit-box-shadow: 1px 2px 14px -1px rgba(20,20,20,1);
+  -moz-box-shadow: 1px 2px 14px -1px rgba(20,20,20,1);
+  box-shadow: 1px 2px 14px -1px rgba(20,20,20,1);
+margin: 20px 50px 20px 50px;
+padding: 10px;
+border-radius: 4px;
+background-color: aliceblue;
+text-align: center;
+}
+
+/*servicios*/
+.servicios {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/*secciones*/
+.secc {
+display: flex;
+flex-direction: column;/*centramos los iconos*/
+align-items: center;
+}
+.secc h3 {
+color: #046487;
+text-align: center;
+}
+.secc p {
+line-height: 2;
+text-align: center;
+}
+
+/*iconos*/
+.icono {
+background-color: #ffc107df;
+border-radius: 50%;
+width: 150px;
+height: 150px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.cont {
+text-align: center;
+font-size: 25px;
+}
+
+/*formularios*/
+fieldset { 
+border: none;
+}
+.formulario {
+background-color: rgb(109, 137, 137);
+width: min(600px, 100%); /*utilizar el valor mas pequeño*/
+border-radius: 5px;
+margin: 0 auto; 
+padding: 10px;
+}
+.formulario legend {
+text-align: center;
+margin: 0 auto;
+font-size: 20px;
+font-weight: 600;
+color: #ffc107df;
+margin-bottom: 20px;
+text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .campos {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto 20px;
+  column-gap: 10px;
+  }
+}
+.campos input {
+border: none;
+border-radius: 3px;
+width: 100%;
+padding: 15px;
+}
+.campos label {
+font-size: medium;
+font-weight: bold;
+margin-bottom: none;
+display: block;
+}
+.area {
+border: none;
+border-radius: 3px;
+padding: 15px;
+width: 100%;
+}
+@media (max-width: 480px) {
+  .area {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto 20px;
+    column-gap: 10px;
+    width: 100%;
+    }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.boton {
+border: none;
+width: 90%;
+padding: 5px;
+margin-top: 15px;
+border-radius: 3px;
+background-color: #046487;
+box-shadow: 0 5px 5px rgba(67, 67, 67, 0.568);
+color: whitesmoke;
+font-size: medium;
+}
+.boton:hover {
+cursor: pointer;
+background-color: rgb(49, 165, 154);
+color: #212121;
+}
+@media (max-width: 480px)  {
+  .boton {
+width: 50%;
+margin-left: auto;
+ }
+}
+
+footer p {
+text-align: center;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
